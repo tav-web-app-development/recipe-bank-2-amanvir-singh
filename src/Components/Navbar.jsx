@@ -1,4 +1,10 @@
 function Navbar() {
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
+ };
   return (
     <>
       <div className="navbar">
@@ -16,6 +22,11 @@ function Navbar() {
             </li>
             <li>
               <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#" onClick={() => {
+                scrollToBottom(); 
+              }}>End of Page</a>
             </li>
           </ul>
         </nav>
